@@ -6,50 +6,111 @@ export const StudentSignInContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(45deg, #FF69B4, #FFA07A, #90EE90); /* Gradient background */
-  min-height: 100vh; /* Full height of the viewport */
+  justify-content: center;
+  background: url('/images/college-campus-day.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Soft overlay for better readability */
+  }
 `;
 
+// Modern Card-style Form
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
-  max-width: 300px; /* Limit form width */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    max-width: 90%;
+    padding: 25px;
+  }
 `;
 
+// Input Fields with Modern Styling
 export const InputField = styled.input`
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
 `;
 
+// Sign-In Button with Gradient & Hover Effects
 export const SubmitButton = styled(Link)`
   width: 100%;
-  padding: 12px;
-  margin-top: 20px;
+  padding: 14px;
+  margin-top: 15px;
   border: none;
   border-radius: 8px;
-  background-color: #FF4500;
+  background: linear-gradient(45deg, #007bff, #0056b3);
   color: white;
   font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: #FF6347;
+    background: linear-gradient(45deg, #0056b3, #003f7f);
+    transform: scale(1.05);
   }
 
   @media screen and (max-width: 768px) {
     font-size: 16px;
+    padding: 12px;
+  }
+`;
+
+// Forgot Password Link
+export const ForgotPasswordLink = styled(Link)`
+  margin-top: 10px;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+`;
+
+// Sign-Up Link
+export const SignUpLink = styled(Link)`
+  margin-top: 15px;
+  color: #ff4500;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #cc3700;
+    text-decoration: underline;
   }
 `;

@@ -2,8 +2,8 @@ import React from 'react';
 import { Navbar, Logo, NavigationLinks, NavLink, ButtonsContainer, LoginButton, HomeContainer, SchoolInfo, SchoolImage, Title, LoremTextContainer, AdminRegisterLink } 
 from '../styles/styles'
 import { LoremIpsum } from 'lorem-ipsum';
-import bg from "../assets/bg.png";
-import bg1 from "../assets/bg1.png";
+import bg from "../assets/rvcefrontgate.jpg";
+import bg1 from "../assets/rvcelogo.png";
 import { Link, useNavigate } from 'react-router-dom';
 
 // Importing components for each section
@@ -30,9 +30,7 @@ const Home = () => {
       <Navbar>
         <Logo src={bg1} alt="Logo" />
           <NavigationLinks>
-          <NavLink href="#">Features</NavLink>
-           <NavLink href="#">Pricing</NavLink>
-           <NavLink href="#">Request a Demo</NavLink>
+          <NavLink href="https://www.rvce.edu.in/">Visit-RVCE-Website</NavLink>
          </NavigationLinks>
         <ButtonsContainer>
           <LoginButton onClick={handleLoginClick}>Sign In</LoginButton>
@@ -40,41 +38,17 @@ const Home = () => {
       </Navbar>
       <HomeContainer>
         <SchoolInfo>
-          <Title>School Management System</Title>
+          <Title>RVCE BUDDY</Title>
           <LoremTextContainer>
-            <p>{loremText}</p>
+            <p>Introduction paragraph to RVCE buddy will go here</p>
           </LoremTextContainer>
           <AdminRegisterLink to="/admin/register">Admin Register</AdminRegisterLink>
         </SchoolInfo>
         <SchoolImage src={bg} alt="pupils" />
 
-        {/* Offer Cards */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <OfferCard icon={<BsFillBookFill />} text="Creating digital lesson plans" />
-          <OfferCard icon={<BsFillBookFill />} text="Daily CBC assessments" />
-          <OfferCard icon={<BsFillBookFill />} text="Creating digital lesson plans" />
-          <OfferCard icon={<BsFillBookFill />} text="Daily CBC assessments" />
-          <OfferCard icon={<BsFillBookFill />} text="Creating digital lesson plans" />
-          <OfferCard icon={<BsFillBookFill />} text="Daily CBC assessments" />
-          <OfferCard icon={<BsFillBookFill />} text="Creating digital lesson plans" />
-          <OfferCard icon={<BsFillBookFill />} text="Daily CBC assessments" />
-          <OfferCard icon={<BsFillBookFill />} text="Creating digital lesson plans" />
-          <OfferCard icon={<BsFillBookFill />} text="Daily CBC assessments" />
-          <OfferCard icon={<BsFillBookFill />} text="Creating digital lesson plans" />
-          <OfferCard icon={<BsFillBookFill />} text="Daily CBC assessments" />
-        </div>
+       
 
-        {/* Request a Demo Form */}
-        <DemoForm />
-
-        {/* Pricing Section */}
-        <PricingSection />
-
-        {/* About Us Section */}
-        <AboutUsSection />
-
-        {/* Get In Touch Section */}
-        <GetInTouchSection />
+       
 
         {/* Footer Section */}
         <Footer />

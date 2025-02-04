@@ -1,61 +1,86 @@
-// ChooseUserStyles.js
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ChooseUserContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #FFD700; /* Playful yellow background color */
+  background-color: #F8F9FA; /* Light modern background */
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between; /* Spread items evenly horizontally */
-    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
   }
 `;
 
 export const UserSection = styled.div`
-  text-align: center; /* Center text */
-  padding-top: 20px;
+  text-align: center;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   @media screen and (min-width: 768px) {
-    padding-top: 0;
-    margin: 20px;
-    text-align: left; /* Align text to the left for larger screens */
+    text-align: left;
+    width: 250px;
   }
 `;
 
 export const Title = styled.h2`
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #FF4500; /* Admin: Orange color */
+  margin-bottom: 15px;
+  color: #333; /* Modern dark gray */
+  text-transform: uppercase;
 
   @media screen and (max-width: 768px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 `;
 
 export const Button = styled(Link)`
-  background-color: #90EE90; /* Student: Light green color */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
   text-decoration: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
 
-  &:hover {
-    background-color: #7CFC00; /* Darker shade of green on hover */
+  /* Different colors for different roles */
+  &.student {
+    background-color: #28A745; /* Green */
+  }
+  &.student:hover {
+    background-color: #218838;
+  }
+
+  &.teacher {
+    background-color: #007BFF; /* Blue */
+  }
+  &.teacher:hover {
+    background-color: #0056b3;
+  }
+
+  &.admin {
+    background-color: #DC3545; /* Red */
+  }
+  &.admin:hover {
+    background-color: #C82333;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 8px 16px;
+    padding: 10px 20px;
     font-size: 14px;
   }
 `;
